@@ -30,15 +30,12 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
+function updateHeaderOnScroll() {
+    header.classList.toggle("scrolled", window.scrollY > 80);
+}
 
-    if (window.scrollY > 80) {
-        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.15)";
-    } else {
-        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
-    }
-
-});
+window.addEventListener("scroll", updateHeaderOnScroll);
+updateHeaderOnScroll();
 
 
 // ===============================
