@@ -836,19 +836,25 @@ showrooms, schools and industries.
 
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
 
-                <input type="text" placeholder="Full Name" required>
+                <input type="hidden" name="access_key" value="805a8245-e5b9-48bb-b7d9-87eb2977bec1">
+                <input type="hidden" name="subject" value="New Enquiry - Satish Paints Website">
+                <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
-                <input type="email" placeholder="Email Address" required>
+                <input type="text" name="name" placeholder="Full Name" required>
 
-                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" name="email" placeholder="Email Address" required>
 
-                <textarea rows="6" placeholder="Tell us about your project"></textarea>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
 
-                <button class="btn btn-primary">
+                <textarea rows="6" name="message" placeholder="Tell us about your project"></textarea>
+
+                <button class="btn btn-primary" type="submit">
                     Send Message
                 </button>
+
+                <p class="form-status" id="form-status"></p>
 
             </form>
 
